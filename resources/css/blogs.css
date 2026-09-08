@@ -1,0 +1,223 @@
+/* ==========================================================================
+   AMZ Hospital — Blogs Page
+   ========================================================================== */
+
+.blogs-page {
+  --blogs-red: #c80f2e;
+  --blogs-wine: #8d253c;
+  --blogs-ink: #0a0a0a;
+  --blogs-body: #737373;
+  --blogs-grey: #f7f8fa;
+  --blogs-line: #ececec;
+  min-width: 320px;
+  background: #fff;
+  color: var(--blogs-ink);
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+.blogs-page *, .blogs-page *::before, .blogs-page *::after { box-sizing: border-box; }
+.blogs-page button { font: inherit; }
+
+.blogs-shell { width: min(1216px, calc(100% - 80px)); margin-inline: auto; }
+.blogs-shell-wide { width: min(1280px, calc(100% - 80px)); margin-inline: auto; }
+.blogs-shell-narrow { width: min(1100px, calc(100% - 80px)); margin-inline: auto; }
+.blogs-center { text-align: center; margin-inline: auto; }
+.blogs-only-sm { display: none; }
+
+/* ---------- shared type ---------- */
+.blogs-eyebrow {
+  color: var(--blogs-wine);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .34em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+.blogs-h2 { font-size: 44px; font-weight: 600; letter-spacing: -.04em; line-height: 1.15; }
+.blogs-lead { color: var(--blogs-body); font-size: 16px; line-height: 28px; }
+
+/* ==========================  HEALTH RESOURCES  ================== */
+.blogs-resources { padding: 40px 0 60px; }
+.blogs-resources .blogs-eyebrow { margin-bottom: 10px; }
+.blogs-resources-title { font-size: 42px; font-weight: 600; letter-spacing: -.04em; line-height: 1.1; margin-bottom: 12px; }
+.blogs-resources-sub { color: var(--blogs-body); font-size: 16px; line-height: 26px; max-width: 520px; margin-bottom: 36px; }
+
+.blogs-guide-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; }
+.blogs-guide-card {
+  border: 1px solid #eee;
+  border-radius: 16px;
+  padding: 28px 22px;
+  background: #fff;
+  transition: box-shadow .2s, transform .2s;
+}
+.blogs-guide-card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,.06); }
+.blogs-guide-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #fde8ea;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+.blogs-guide-icon svg { width: 20px; height: 20px; color: var(--blogs-red); }
+.blogs-guide-card h3 { font-size: 17px; font-weight: 600; letter-spacing: -.01em; margin-bottom: 8px; line-height: 1.3; }
+.blogs-guide-card p { color: var(--blogs-body); font-size: 13.5px; line-height: 22px; margin-bottom: 16px; }
+.blogs-guide-link { color: var(--blogs-ink); font-size: 14px; font-weight: 500; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; }
+.blogs-guide-link:hover { color: var(--blogs-red); }
+.blogs-guide-link svg { width: 14px; height: 14px; }
+
+/* ==========================  VIDEO BLOGS  ======================= */
+.blogs-videos { padding: 40px 0 60px; background: #fafafa; }
+.blogs-videos .blogs-eyebrow { margin-bottom: 10px; }
+.blogs-videos-title { font-size: 42px; font-weight: 600; letter-spacing: -.04em; line-height: 1.1; margin-bottom: 12px; }
+.blogs-videos-sub { color: var(--blogs-body); font-size: 16px; line-height: 26px; max-width: 560px; margin-bottom: 36px; }
+
+.blogs-video-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.blogs-video-card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: box-shadow .2s, transform .2s;
+}
+.blogs-video-card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,.06); }
+.blogs-video-thumb { position: relative; height: 180px; overflow: hidden; }
+.blogs-video-thumb img { width: 100%; height: 100%; object-fit: cover; }
+.blogs-video-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(0,0,0,.15);
+}
+.blogs-video-play svg { width: 20px; height: 20px; color: #333; margin-left: 2px; }
+.blogs-video-body { padding: 18px 20px 20px; }
+.blogs-video-tag {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: #888;
+  margin-bottom: 8px;
+}
+.blogs-video-card h3 { font-size: 16px; font-weight: 600; letter-spacing: -.01em; line-height: 1.35; margin-bottom: 6px; }
+.blogs-video-card .video-duration { color: var(--blogs-body); font-size: 13px; }
+
+/* ==========================  TRUST / COMMITMENT  ================ */
+.blogs-trust { padding: 50px 0 60px; }
+.blogs-trust-inner {
+  border: 1px solid #eee;
+  border-radius: 20px;
+  padding: 48px 40px;
+  text-align: center;
+  background: #fafafa;
+}
+.blogs-trust-inner h2 { font-size: 34px; font-weight: 600; letter-spacing: -.03em; line-height: 1.15; margin-bottom: 12px; }
+.blogs-trust-inner > p { color: var(--blogs-body); font-size: 15px; line-height: 26px; max-width: 620px; margin: 0 auto 28px; }
+
+.blogs-trust-pills { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin-bottom: 24px; }
+.blogs-trust-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #eee;
+  border-radius: 999px;
+  padding: 14px 28px;
+  background: #fff;
+  font-size: 14px;
+  font-weight: 500;
+}
+.blogs-trust-pill svg { width: 18px; height: 18px; color: var(--blogs-red); }
+
+.blogs-trust-disclaimer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: var(--blogs-body);
+  font-size: 13px;
+  padding: 14px 20px;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  background: #fff;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.blogs-trust-disclaimer svg { width: 18px; height: 18px; color: #888; flex-shrink: 0; }
+
+/* ==========================  NEWS & MEDIA  ====================== */
+.blogs-news { padding: 40px 0 80px; }
+.blogs-news .blogs-eyebrow { margin-bottom: 10px; }
+.blogs-news-title { font-size: 42px; font-weight: 600; letter-spacing: -.04em; line-height: 1.1; margin-bottom: 36px; }
+
+.blogs-news-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.blogs-news-card {
+  border: 1px solid #eee;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fff;
+  transition: box-shadow .2s, transform .2s;
+}
+.blogs-news-card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,.06); }
+.blogs-news-card img { width: 100%; height: 220px; object-fit: cover; }
+.blogs-news-body { padding: 22px 24px 24px; }
+.blogs-news-tag {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: #888;
+  margin-bottom: 8px;
+}
+.blogs-news-card h3 { font-size: 18px; font-weight: 600; letter-spacing: -.01em; line-height: 1.35; margin-bottom: 8px; }
+.blogs-news-card time { color: var(--blogs-body); font-size: 13px; display: block; margin-bottom: 12px; }
+.blogs-news-link { color: var(--blogs-ink); font-size: 14px; font-weight: 500; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; }
+.blogs-news-link:hover { color: var(--blogs-red); }
+.blogs-news-link svg { width: 14px; height: 14px; }
+
+/* ==========================================================================
+   TABLET
+   ========================================================================== */
+@media (max-width: 1180px) {
+  .blogs-shell, .blogs-shell-wide, .blogs-shell-narrow { width: min(1100px, calc(100% - 40px)); }
+  .blogs-guide-grid { grid-template-columns: repeat(3, 1fr); }
+  .blogs-video-grid { grid-template-columns: repeat(2, 1fr); }
+  .blogs-news-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ==========================================================================
+   MOBILE
+   ========================================================================== */
+@media (max-width: 900px) {
+  .blogs-shell, .blogs-shell-wide, .blogs-shell-narrow { width: min(362px, calc(100% - 32px)); }
+  .blogs-only-lg { display: none; }
+  .blogs-only-sm { display: inline; }
+
+  .blogs-h2 { font-size: 30px; letter-spacing: -.03em; line-height: 1.2; }
+  .blogs-lead { font-size: 15px; line-height: 26px; }
+
+  .blogs-resources-title, .blogs-videos-title, .blogs-news-title { font-size: 30px; }
+  .blogs-resources-sub, .blogs-videos-sub { font-size: 15px; }
+
+  .blogs-guide-grid { grid-template-columns: 1fr; gap: 14px; }
+  .blogs-video-grid { grid-template-columns: 1fr; gap: 16px; }
+  .blogs-news-grid { grid-template-columns: 1fr; gap: 16px; }
+
+  .blogs-trust-inner { padding: 36px 24px; border-radius: 16px; }
+  .blogs-trust-inner h2 { font-size: 26px; }
+  .blogs-trust-pills { flex-direction: column; align-items: center; }
+  .blogs-trust-pill { width: 100%; max-width: 300px; justify-content: center; }
+}
+
+@media (max-width: 420px) {
+  .blogs-resources-title, .blogs-videos-title, .blogs-news-title { font-size: 26px; }
+}

@@ -1,0 +1,220 @@
+/* ==========================================================================
+   AMZ Hospital — Blog Single Page
+   ========================================================================== */
+
+.blog-single-page {
+  --bs-red: #c80f2e;
+  --bs-wine: #8d253c;
+  --bs-ink: #0a0a0a;
+  --bs-body: #737373;
+  --bs-grey: #f7f8fa;
+  --bs-line: #ececec;
+  min-width: 320px;
+  background: #fff;
+  color: var(--bs-ink);
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+.blog-single-page *, .blog-single-page *::before, .blog-single-page *::after { box-sizing: border-box; }
+.blog-single-page button { font: inherit; }
+
+.bs-shell { width: min(1216px, calc(100% - 80px)); margin-inline: auto; }
+.bs-shell-wide { width: min(1280px, calc(100% - 80px)); margin-inline: auto; }
+.bs-only-sm { display: none; }
+
+/* ---------- shared type ---------- */
+.bs-eyebrow {
+  color: var(--bs-wine);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .34em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+/* ==========================  BREADCRUMB  ====================== */
+.bs-crumb { display: flex; align-items: center; gap: 8px; color: #999; font-size: 12px; padding-top: 32px; }
+.bs-crumb svg { width: 10px; height: 10px; color: #bbb; }
+.bs-crumb a { color: #999; }
+.bs-crumb a:hover { color: var(--bs-red); }
+.bs-crumb span { color: var(--bs-ink); }
+
+/* ==========================  ARTICLE HEADER  =================== */
+.bs-header { padding: 24px 0 0; }
+.bs-category-badge {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 999px;
+  padding: 6px 16px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 20px;
+}
+.bs-title { font-size: 48px; font-weight: 600; letter-spacing: -.04em; line-height: 1.1; max-width: 820px; margin-bottom: 20px; }
+
+.bs-author-row { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; margin-bottom: 32px; }
+.bs-author { display: flex; align-items: center; gap: 12px; }
+.bs-author-avatar { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
+.bs-author-name { font-size: 15px; font-weight: 600; }
+.bs-author-reviewer { font-size: 13px; color: var(--bs-body); }
+.bs-meta { display: flex; align-items: center; gap: 6px; color: var(--bs-body); font-size: 13px; }
+.bs-meta .dot { width: 4px; height: 4px; border-radius: 50%; background: #ccc; }
+
+/* ==========================  HERO IMAGE  ======================= */
+.bs-hero-img { width: 100%; border-radius: 20px; overflow: hidden; margin-bottom: 32px; }
+.bs-hero-img img { width: 100%; height: 440px; object-fit: cover; }
+
+/* ==========================  ARTICLE LAYOUT  =================== */
+.bs-layout { display: grid; grid-template-columns: 1fr 320px; gap: 48px; align-items: flex-start; }
+
+/* ---------- Article Content ---------- */
+.bs-content { min-width: 0; }
+.bs-content p { color: #333; font-size: 15.5px; line-height: 28px; margin-bottom: 20px; }
+.bs-content h2 { font-size: 24px; font-weight: 600; letter-spacing: -.02em; line-height: 1.3; margin-top: 36px; margin-bottom: 14px; }
+.bs-content h3 { font-size: 20px; font-weight: 600; letter-spacing: -.015em; line-height: 1.35; margin-top: 32px; margin-bottom: 12px; }
+
+.bs-disclaimer {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 18px 22px;
+  background: #fafafa;
+  margin: 32px 0;
+}
+.bs-disclaimer svg { width: 20px; height: 20px; color: #888; flex-shrink: 0; margin-top: 2px; }
+.bs-disclaimer p { font-size: 13.5px; color: var(--bs-body); line-height: 22px; margin: 0; }
+
+/* ---------- Sidebar ---------- */
+.bs-sidebar { position: sticky; top: 100px; }
+
+/* TOC */
+.bs-toc {
+  border: 1px solid #eee;
+  border-radius: 16px;
+  padding: 24px 22px;
+  margin-bottom: 24px;
+  background: #fff;
+}
+.bs-toc-title { font-size: 11px; font-weight: 700; letter-spacing: .28em; text-transform: uppercase; color: #333; margin-bottom: 16px; }
+.bs-toc-list { list-style: none; padding: 0; margin: 0; }
+.bs-toc-list li { margin-bottom: 0; }
+.bs-toc-list a {
+  display: block;
+  padding: 10px 14px;
+  font-size: 14px;
+  color: var(--bs-body);
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background .15s, color .15s;
+}
+.bs-toc-list a:hover, .bs-toc-list a.active { background: #f5f5f5; color: var(--bs-ink); }
+.bs-toc-list a.active { font-weight: 500; }
+
+/* Doctor Card */
+.bs-doctor-card {
+  border: 1px solid #eee;
+  border-radius: 16px;
+  padding: 22px;
+  margin-bottom: 24px;
+  background: #fff;
+  text-align: center;
+}
+.bs-doctor-avatar { width: 56px; height: 56px; border-radius: 50%; object-fit: cover; margin: 0 auto 12px; }
+.bs-doctor-card h4 { font-size: 16px; font-weight: 600; letter-spacing: -.01em; margin-bottom: 4px; }
+.bs-doctor-card .doc-dept { font-size: 13px; color: var(--bs-body); margin-bottom: 16px; }
+.bs-doctor-book {
+  display: block;
+  width: 100%;
+  height: 44px;
+  border-radius: 999px;
+  background: var(--bs-red);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: background .18s;
+}
+.bs-doctor-book:hover { background: #ae0b27; }
+
+/* Related Articles */
+.bs-related {
+  border: 1px solid #eee;
+  border-radius: 16px;
+  padding: 22px;
+  background: #fff;
+}
+.bs-related-title { font-size: 11px; font-weight: 700; letter-spacing: .28em; text-transform: uppercase; color: #333; margin-bottom: 16px; }
+.bs-related-item { display: flex; gap: 14px; padding: 12px 0; border-bottom: 1px solid #f0f0f0; }
+.bs-related-item:last-child { border-bottom: none; padding-bottom: 0; }
+.bs-related-item:first-of-type { padding-top: 0; }
+.bs-related-thumb { width: 72px; height: 56px; border-radius: 10px; overflow: hidden; flex-shrink: 0; }
+.bs-related-thumb img { width: 100%; height: 100%; object-fit: cover; }
+.bs-related-item h4 { font-size: 14px; font-weight: 600; letter-spacing: -.005em; line-height: 1.35; margin-bottom: 4px; }
+.bs-related-item time { font-size: 12px; color: var(--bs-body); }
+
+/* ==========================  RELATED BLOGS  ==================== */
+.bs-related-blogs { padding: 50px 0 80px; }
+.bs-related-blogs-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 28px; }
+.bs-related-blogs-header h2 { font-size: 28px; font-weight: 600; letter-spacing: -.03em; }
+.bs-view-all { color: var(--bs-body); font-size: 14px; text-decoration: none; }
+.bs-view-all:hover { color: var(--bs-red); }
+
+.bs-related-blogs-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.bs-rb-card {
+  border: 1px solid #eee;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fff;
+  transition: box-shadow .2s, transform .2s;
+}
+.bs-rb-card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,.06); }
+.bs-rb-card img { width: 100%; height: 180px; object-fit: cover; }
+.bs-rb-body { padding: 18px 20px 22px; }
+.bs-rb-body time { font-size: 13px; color: var(--bs-body); display: block; margin-bottom: 8px; }
+.bs-rb-card h3 { font-size: 16px; font-weight: 600; letter-spacing: -.01em; line-height: 1.4; }
+
+/* ==========================================================================
+   TABLET
+   ========================================================================== */
+@media (max-width: 1180px) {
+  .bs-shell, .bs-shell-wide { width: min(1100px, calc(100% - 40px)); }
+  .bs-layout { grid-template-columns: 1fr 280px; gap: 36px; }
+  .bs-title { font-size: 40px; }
+  .bs-hero-img img { height: 360px; }
+}
+
+/* ==========================================================================
+   MOBILE
+   ========================================================================== */
+@media (max-width: 900px) {
+  .bs-shell, .bs-shell-wide { width: min(362px, calc(100% - 32px)); }
+  .bs-only-lg { display: none; }
+  .bs-only-sm { display: inline; }
+
+  .bs-title { font-size: 32px; letter-spacing: -.03em; }
+  .bs-header { padding-top: 20px; }
+  .bs-hero-img img { height: 220px; border-radius: 14px; }
+
+  .bs-layout { grid-template-columns: 1fr; gap: 28px; }
+  .bs-sidebar { position: static; }
+
+  .bs-author-row { gap: 16px; }
+  .bs-meta { font-size: 12px; }
+
+  .bs-content p { font-size: 15px; line-height: 26px; }
+  .bs-content h2 { font-size: 22px; margin-top: 28px; }
+
+  .bs-related-blogs-grid { grid-template-columns: 1fr; gap: 16px; }
+  .bs-rb-card img { height: 160px; }
+
+  .bs-related-blogs-header h2 { font-size: 24px; }
+}
+
+@media (max-width: 420px) {
+  .bs-title { font-size: 28px; }
+}

@@ -1,0 +1,136 @@
+.departments-page {
+  --dept-red: #ed0712;
+  --dept-ink: #080808;
+  --dept-copy: #747474;
+  min-width: 320px;
+  color: var(--dept-ink);
+  background: #fff;
+  font-family: "Figma Inter", Inter, ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+.departments-page *, .departments-page *::before, .departments-page *::after { box-sizing: border-box; }
+.departments-page button, .departments-page input { font: inherit; }
+.departments-main { width: min(1216px, calc(100% - 40px)); min-height: 3791px; margin: 0 auto; padding-top: 36px; }
+.department-breadcrumb { display: flex; align-items: center; gap: 12px; color: #777; font-size: 13px; }
+.department-breadcrumb svg { width: 14px; height: 14px; }
+.department-breadcrumb span { color: #111; font-weight: 600; }
+
+.departments-hero { display: grid; grid-template-columns: 1fr 584px; gap: 78px; align-items: center; min-height: 452px; margin-top: 84px; }
+.departments-hero-copy { padding-top: 20px; }
+.department-kicker { display: flex; align-items: center; gap: 14px; color: #222; font-size: 12px; font-weight: 600; letter-spacing: .36em; }
+.department-kicker i { width: 32px; height: 1px; background: #141414; }
+.departments-hero h1 { margin-top: 27px; color: #050505; font-size: 67px; font-weight: 600; letter-spacing: -.052em; line-height: 1.02; }
+.departments-hero-lead { margin-top: 36px; color: #777; font-size: 17px; line-height: 1.78; }
+.departments-trust { display: flex; align-items: center; gap: 28px; margin-top: 43px; color: #737373; font-size: 13px; }
+.departments-trust span { display: flex; align-items: center; gap: 8px; }
+.departments-trust svg { width: 18px; height: 18px; color: #252525; }
+.departments-hero > img { width: 584px; height: 452px; border-radius: 22px; object-fit: cover; }
+
+.needs-section { margin-top: 132px; }
+.needs-section > h2 { font-size: 48px; font-weight: 600; letter-spacing: -.045em; line-height: 1.1; }
+.needs-section > p { margin-top: 18px; color: #777; font-size: 16px; line-height: 1.65; }
+.needs-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; margin-top: 42px; }
+.needs-grid button { position: relative; height: 126px; border: 1px solid #dedfe2; border-radius: 14px; background: #fff; padding: 20px; text-align: left; cursor: pointer; box-shadow: 0 3px 7px rgba(17, 24, 39, .06); transition: transform .18s, border-color .18s; }
+.needs-grid button:hover { border-color: rgba(237, 7, 18, .4); transform: translateY(-2px); }
+.needs-grid button > svg:first-child { width: 24px; height: 24px; color: var(--dept-red); stroke-width: 1.9; }
+.needs-grid button > svg:last-child { position: absolute; right: 18px; bottom: 19px; width: 14px; height: 14px; color: #777; }
+.needs-grid strong { position: absolute; left: 20px; bottom: 19px; max-width: 150px; font-size: 14px; line-height: 1.35; }
+.needs-section .medical-note { display: flex; align-items: center; gap: 8px; margin-top: 24px; color: #8a8a8a; font-size: 11px; }
+.medical-note svg { width: 15px; height: 15px; }
+
+.department-search-panel { min-height: 300px; margin-top: 86px; border-radius: 22px; background: #f5f5f5; padding: 39px 40px 34px; }
+.search-panel-heading { display: flex; align-items: end; justify-content: space-between; }
+.search-panel-heading p, .department-section-heading > div > p { color: #161616; font-size: 11px; font-weight: 600; letter-spacing: .35em; }
+.search-panel-heading h2 { margin-top: 12px; font-size: 35px; font-weight: 600; letter-spacing: -.035em; }
+.search-panel-heading > span { margin: 0 36px 2px 0; color: #777; font-size: 13px; line-height: 1.65; }
+.department-search-panel > label { display: flex; align-items: center; gap: 18px; height: 65px; margin-top: 31px; border: 1px solid #e0e1e3; border-radius: 14px; background: #fff; padding: 0 22px; box-shadow: 0 2px 5px rgba(17, 24, 39, .05); }
+.department-search-panel > label svg { width: 22px; height: 22px; color: #777; }
+.department-search-panel input { flex: 1; min-width: 0; border: 0; outline: 0; background: transparent; color: #171717; font-size: 14px; }
+.department-search-panel input::placeholder { color: #898989; opacity: 1; }
+.popular-searches { display: flex; align-items: center; gap: 12px; margin-top: 18px; }
+.popular-searches span { color: #858585; font-size: 12px; }
+.popular-searches button { height: 37px; border: 1px solid #dedfe2; border-radius: 999px; background: #fff; padding: 0 17px; cursor: pointer; font-size: 12px; box-shadow: 0 2px 5px rgba(17, 24, 39, .05); }
+
+.all-departments { margin-top: 112px; }
+.department-section-heading { display: flex; align-items: end; justify-content: space-between; }
+.department-section-heading h2 { margin-top: 11px; font-size: 43px; font-weight: 600; letter-spacing: -.04em; line-height: 1.1; }
+.department-section-heading > span { color: #777; font-size: 14px; }
+.department-tabs { display: grid; grid-template-columns: repeat(7, 1fr); margin-top: 36px; border-bottom: 1px solid #dadbdd; }
+.department-tabs button { height: 48px; border: 0; border-bottom: 2px solid transparent; background: transparent; color: #111; cursor: pointer; font-size: 13px; white-space: nowrap; }
+.department-tabs button.active { border-bottom-color: #111; background: #fff; box-shadow: 0 4px 8px rgba(17, 24, 39, .05); }
+.all-department-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 28px; }
+.all-department-card { display: grid; grid-template-columns: 130px 1fr; align-items: center; min-height: 168px; border-radius: 4px; background: #f5f5f5; padding: 19px 28px 19px 20px; }
+.all-department-card img { width: 112px; height: 112px; object-fit: contain; }
+.all-department-card img.monochrome { filter: grayscale(1) brightness(0); }
+.all-department-card h3 { font-size: 31px; font-weight: 600; letter-spacing: -.035em; line-height: 1.02; }
+.all-department-card h3 small { font-size: 19px; font-weight: 600; letter-spacing: -.02em; }
+.all-department-card p { margin-top: 8px; color: #171717; font-size: 13px; line-height: 1.45; }
+.department-empty { min-height: 250px; display: grid; place-items: center; color: #777; }
+
+.centers-section { margin-top: 128px; border-top: 1px solid #dedede; padding-top: 77px; }
+.centers-section .department-section-heading em { display: block; margin-top: 14px; color: #777; font-size: 16px; font-style: normal; }
+.centers-section .department-section-heading > a { display: inline-flex; align-items: center; gap: 8px; color: #111; font-size: 13px; font-weight: 600; }
+.centers-section .department-section-heading > a svg { width: 15px; height: 15px; }
+.department-centers-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 36px; }
+.department-center-card { position: relative; min-height: 360px; display: flex; flex-direction: column; justify-content: space-between; border: 1px solid #e0e1e3; border-radius: 20px; background: #f5f5f5; padding: 24px 24px 27px; overflow: hidden; box-shadow: 0 3px 7px rgba(17, 24, 39, .05); }
+.department-center-card > svg { width: 25px; height: 25px; }
+.department-center-card h3 { font-size: 22px; font-weight: 600; line-height: 1.25; }
+.department-center-card p { margin-top: 15px; color: #777; font-size: 13px; line-height: 1.55; }
+.department-center-card a { display: inline-flex; align-items: center; gap: 8px; margin-top: 24px; color: #111; font-size: 13px; font-weight: 600; }
+.department-center-card a svg { width: 14px; height: 14px; }
+.department-center-card.center-with-image { display: block; background: #fff; padding: 0 0 25px; }
+.center-with-image > img { width: 100%; height: 202px; object-fit: cover; }
+.center-with-image > div { padding: 20px 24px 0; }
+
+.departments-emergency { min-height: 126px; display: flex; align-items: center; justify-content: space-between; margin-top: 78px; border: 1px solid #cfd0d2; border-radius: 19px; background: #f5f5f5; padding: 0 32px; }
+.departments-emergency > div { display: flex; align-items: center; gap: 18px; }
+.departments-emergency > div:first-child > svg { width: 28px; height: 28px; }
+.departments-emergency span strong, .departments-emergency span small { display: block; }
+.departments-emergency span strong { font-size: 22px; }
+.departments-emergency span small { margin-top: 8px; color: #777; font-size: 13px; }
+.departments-emergency a { height: 45px; display: inline-flex; align-items: center; gap: 9px; border: 1px solid #dedfe2; border-radius: 999px; background: #fff; color: #111; padding: 0 18px; font-size: 13px; font-weight: 600; box-shadow: 0 2px 5px rgba(17, 24, 39, .06); }
+.departments-emergency a:first-child { border-color: var(--dept-red); background: var(--dept-red); color: #fff; }
+.departments-emergency a svg { width: 17px; height: 17px; }
+.departments-final-cta { min-height: 323px; display: flex; flex-direction: column; align-items: center; justify-content: center; margin-top: 80px; border-radius: 22px; background: #f5f5f5; text-align: center; }
+.departments-final-cta h2 { font-size: 43px; font-weight: 600; letter-spacing: -.045em; line-height: .98; }
+.departments-final-cta p { margin-top: 25px; color: #777; font-size: 15px; line-height: 1.55; }
+.departments-final-cta > div { display: flex; gap: 13px; margin-top: 31px; }
+.departments-final-cta a { height: 48px; min-width: 145px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; border: 1px solid #dedfe2; border-radius: 999px; background: #fff; color: #111; padding: 0 20px; font-size: 13px; font-weight: 600; }
+.departments-final-cta a:first-child { border-color: #111; background: #111; color: #fff; }
+.departments-final-cta a svg { width: 15px; height: 15px; }
+
+@media (max-width: 1000px) {
+  .departments-hero { grid-template-columns: 1fr 46%; gap: 35px; }
+  .departments-hero > img { width: 100%; }
+  .departments-hero h1 { font-size: 52px; }
+  .needs-grid { grid-template-columns: repeat(3, 1fr); }
+  .department-tabs { overflow-x: auto; grid-template-columns: repeat(7, minmax(145px, 1fr)); }
+  .department-centers-grid { grid-template-columns: 1fr 1fr; }
+  .department-center-card:last-child { grid-column: 1 / -1; }
+}
+@media (max-width: 700px) {
+  .departments-main { width: calc(100% - 24px); padding-top: 24px; }
+  .departments-hero { grid-template-columns: 1fr; margin-top: 55px; }
+  .departments-hero-copy { order: 1; }
+  .departments-hero > img { order: 0; height: 300px; }
+  .departments-hero h1 { font-size: 45px; }
+  .departments-hero-lead br, .needs-section > p br, .all-department-card p br { display: none; }
+  .needs-section { margin-top: 90px; }
+  .needs-section > h2 { font-size: 38px; }
+  .needs-grid { grid-template-columns: repeat(2, 1fr); }
+  .department-search-panel { padding-inline: 20px; }
+  .search-panel-heading { align-items: start; flex-direction: column; gap: 20px; }
+  .search-panel-heading h2 { font-size: 31px; }
+  .popular-searches { flex-wrap: wrap; }
+  .department-section-heading { align-items: start; flex-direction: column; gap: 18px; }
+  .all-department-grid { grid-template-columns: 1fr; }
+  .all-department-card { grid-template-columns: 92px 1fr; padding: 15px; }
+  .all-department-card img { width: 78px; height: 78px; }
+  .all-department-card h3 { font-size: 24px; }
+  .department-centers-grid { grid-template-columns: 1fr; }
+  .department-center-card:last-child { grid-column: auto; }
+  .departments-emergency { align-items: flex-start; flex-direction: column; gap: 25px; padding: 25px 22px; }
+  .departments-emergency > div:last-child { flex-wrap: wrap; }
+  .departments-final-cta { padding-inline: 20px; }
+  .departments-final-cta h2 { font-size: 36px; }
+}

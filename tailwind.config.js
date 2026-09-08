@@ -8,6 +8,7 @@ export default {
         './storage/framework/views/*.php',
         './resources/views/**/*.blade.php',
         './resources/js/**/*.{vue,js,ts,jsx,tsx}',
+        './modules/*/Resources/js/**/*.{vue,js,ts,jsx,tsx}',
     ],
     theme: {
         extend: {
@@ -20,6 +21,7 @@ export default {
                 sm: 'calc(var(--radius) - 4px)',
             },
             colors: {
+                'amz-red': '#e01f29',
                 background: 'hsl(var(--background))',
                 foreground: 'hsl(var(--foreground))',
                 card: {
