@@ -1,6 +1,6 @@
 <script setup>
 import { onBeforeUnmount, onMounted, ref } from 'vue'
-import FrontendLayout from '../../Layouts/FrontendLayout.vue';
+import FrontendLayout from '../../js/Layouts/FrontendLayout.vue';
 
 const heroIndex = ref(0)
 const departmentFilter = ref('all')
